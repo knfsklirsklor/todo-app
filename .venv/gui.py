@@ -14,11 +14,13 @@ while True:
     print(event)
     print(values)
     match event:
-        case "add":
+        case "Add":
             todos = functions.get_todos()
             new_todos = values['todo'] + "\n"
-            todos.appends(new_todo)
+            todos.append(new_todos)
             functions.write_todos(todos)
+        case sg.WIN_CLOSED:
+            break
 
 
 window.close()
